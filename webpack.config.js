@@ -11,7 +11,7 @@ module.exports = (env, argv) => {
   const isDev = !isProd
 
   const filename = (ext) =>
-   isProd ? `[name].[contenthash].bundle.${ext}` : `[name].bundle.${ext}`
+    isProd ? `[name].[contenthash].bundle.${ext}` : `[name].bundle.${ext}`
   const plugins = () => {
     const base = [
       new HtmlWebpackPlugin({
@@ -57,8 +57,7 @@ module.exports = (env, argv) => {
     },
     plugins: plugins(),
     devServer: {
-      open: true,
-      port: 9000,
+      port: 3000,
       hot: true
     },
     devtool: isDev ? 'source-map' : false,
@@ -70,6 +69,7 @@ module.exports = (env, argv) => {
             MiniCssExtractPlugin.loader,
             'css-loader',
             'sass-loader',
+            'postcss-loader'
           ],
         },
         {
@@ -78,7 +78,8 @@ module.exports = (env, argv) => {
           use: {
             loader: 'babel-loader',
             options: {
-              presets: ['@babel/preset-env']
+              presets: ['@babel/preset-env'],
+              targets: '> 0.25%, not dead'
             }
           }
         }

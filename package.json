@@ -9,17 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kemzi-coder/excel-course.git"
+    "url": "git+https://github.com/Kemzi-coder/webpack-2.git"
   },
   "keywords": [],
   "author": "",
   "private": true,
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Kemzi-coder/excel-course/issues"
+    "url": "https://github.com/Kemzi-coder/webpack-2/issues"
   },
-  "browserslist": "> 0.25%, not dead",
-  "homepage": "https://github.com/Kemzi-coder/excel-course#readme",
+  "homepage": "https://github.com/Kemzi-coder/webpack-2#readme",
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/eslint-parser": "^7.14.7",
@@ -30,10 +29,12 @@
     "core-js": "^3.9.0",
     "css-loader": "^5.2.6",
     "eslint": "^7.30.0",
-    "eslint-config-google": "^0.14.0",
     "eslint-webpack-plugin": "^2.5.4",
     "html-webpack-plugin": "^5.3.2",
     "mini-css-extract-plugin": "^2.1.0",
+    "postcss": "^8.3.5",
+    "postcss-loader": "^6.1.1",
+    "postcss-preset-env": "^6.7.0",
     "regenerator-runtime": "^0.13.7",
     "sass": "^1.35.2",
     "sass-loader": "^12.1.0",

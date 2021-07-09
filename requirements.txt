@@ -1,2 +1,0 @@
-Webpack
-Gitgit push -u origin main
