@@ -57,7 +57,7 @@ module.exports = (env, argv) => {
     },
     plugins: plugins(),
     devServer: {
-      port: 3000,
+      port: 9000,
       hot: true
     },
     devtool: isDev ? 'source-map' : false,
@@ -69,7 +69,6 @@ module.exports = (env, argv) => {
             MiniCssExtractPlugin.loader,
             'css-loader',
             'sass-loader',
-            'postcss-loader'
           ],
         },
         {
@@ -78,8 +77,9 @@ module.exports = (env, argv) => {
           use: {
             loader: 'babel-loader',
             options: {
-              presets: ['@babel/preset-env'],
-              targets: '> 0.25%, not dead'
+              presets: [
+                ['@babel/preset-env', {"targets": "> 0.25%, not dead"}]
+              ],
             }
           }
         }
