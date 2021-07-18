@@ -59,7 +59,16 @@ function drawGame() {
    ctx.drawImage(foodImg, food.x, food.y)
 
    for (let i = 0; i < snake.length; i++) {
-      ctx.fillStyle = i === 0 ? 'green' : 'red'
+
+      if (i === 0) {
+         const snakeHead = new Image()
+         snakeHead.src = './head.png'
+         const pattern = ctx.createPattern(snakeHead, 'repeat')
+         ctx.fillStyle = pattern
+      } else {
+         ctx.fillStyle = 'red'
+      }
+      
       ctx.fillRect(snake[i].x, snake[i].y, box, box)
    }
 

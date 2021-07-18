@@ -30,6 +30,10 @@ module.exports = (env, argv) => {
           {
             from: path.resolve(__dirname, 'src', 'food.png'),
             to: path.resolve(__dirname, 'dist')
+          },
+          {
+            from: path.resolve(__dirname, 'src', 'head.png'),
+            to: path.resolve(__dirname, 'dist')
           }
         ]
       }),
